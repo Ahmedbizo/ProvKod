@@ -1,6 +1,19 @@
 import React, {useState, useEffect} from 'react';
 import {View, Text, Image, StyleSheet, ActivityIndicator} from 'react-native';
 
+
+/* It would be similar to the Pokemons component,
+ making an API call in the useEffect() and saving it in our state.
+  Then, using that state variable to display data onto our screen. */
+
+
+  /* I use navigation.state.params to read the params 
+  that i have passed from the Pokemons component to Details component. 
+  Using that param in fetchPokemonsDetail function i make an API call to get individual pokemon data. 
+  While returning from the component I’ve added a condition so that it doesn’t show a blank screen while data is being fetched, 
+  it’ll show the ActivityIndicator . */ 
+
+
 const Details = props => {
   const [details, setDetails] = useState([]);
 
