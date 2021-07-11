@@ -47,7 +47,9 @@ const Pokemons = props => {
           onChangeText={value => setSearchfeild(value)}
           value={searchfeild}
         />
+        
       </View>
+      
       <ScrollView>
         <View style={styles.container}>
           {pokemons
@@ -82,6 +84,17 @@ const Pokemons = props => {
     </View>
   );
 };
+
+/*In the above code ,First, I code our TextInput that will be at the top.
+ i use onChangeText to listen to changes happening in the TextInput and use the setSearchfeild function to set the value of our TextInput to searchfeild.
+  i use the JavaScript .filter() method to filter pokemons according to the search.
+   The .filter() method returns an array so i use .map() method to map through that array.*/
+
+   /*To handle touches i use Touchable Components in React-Native.TouchableOpacity 
+   gives feedback when touched or tapped on. */
+
+   /* In onPress i using props.navigation.navigate() to navigate to Details.js component and passing pokemon.name as a param,
+    i use that param to get individual pokemon data. */
 
 export default Pokemons;
 
