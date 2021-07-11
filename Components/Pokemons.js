@@ -98,6 +98,10 @@ const Pokemons = props => {
 
 export default Pokemons;
 
+/* I use StyleSheet in React-Native to define styles for a Component. 
+In StyleSheet.create() i pass an object in which i can define our styles for the component.
+ i use the styles by passing a reference of that style in the style property of our React-Native elements. */
+
 const styles = StyleSheet.create({
   container: {
     display: 'flex',
