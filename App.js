@@ -7,6 +7,10 @@ import Details from './Components/Details';
 /*createStackNavigator is a function that returns a component, 
 it can take two parameters, first a configuration object that will be our routes and we can pass a second configuration object which is optional.
  createStackNavigator places a component on the top like a stack*/
+
+ /*createAppContainer is a function that takes
+  appNavigator and returns the component that is returned from appNavigator*/
+  
 const appNavigator = createStackNavigator(
   {
     Home: {

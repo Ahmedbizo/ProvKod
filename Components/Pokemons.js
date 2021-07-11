@@ -9,9 +9,17 @@ import {
   TextInput,
 } from 'react-native';
 
+/*useState() hook helps us use state variables in a functional component.
+ i will be using a state variable to save our pokemon data
+  and another to filter pokemon when someone uses the search input */
+
 const Pokemons = props => {
   const [pokemons, setPokemons] = useState([]);
   const [searchfeild, setSearchfeild] = useState('');
+
+  /*We can use useEffect() hook as componentDidMount() . useEffect() takes a callback as a parameter. 
+  To make it work like componentDidMount()
+   we pass an empty array as a second parameter in the use useEffect() hook like so */
 
   useEffect(() => {
     fetchPokemons();
@@ -22,6 +30,13 @@ const Pokemons = props => {
       .then(response => response.json())
       .then(pokemons => setPokemons(pokemons.results));
   };
+
+  /* In the above code, pokemons is a state variable, an array where i save our pokemon data. Initially, 
+  it is an empty array and the setPokemons is a function that is used to change that state. The searchfeild state variable is for a search input that i will use.
+   setPokemons and setSearchfeild works as this.setState() . i use useEffect() as componentDidMount(). In the fetchPokemons() function,
+   we make an API call to the PokeApi server to get our pokemon data.
+   Then i convert it into JSON format and then using the setPokemons functions i save pokemons.
+   results in our pokemons state variable. */
 
   return (
     <View>
